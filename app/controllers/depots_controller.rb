@@ -1,0 +1,2 @@
+class DepotsController < ApplicationController
+end
