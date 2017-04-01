@@ -45,3 +45,6 @@ group :development do
   gem 'spring'
 end
 
+gem 'awesome_print'
+gem 'bootstrap-sass'
+
