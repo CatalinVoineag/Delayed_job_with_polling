@@ -1,0 +1,33 @@
+<div class="col-md-12">
+  <br>
+  <div class="export">
+    <%= link_to 'Export Products', download_csv_path(depot_id: Depot.first.id), remote: true, class: 'btn btn-primary btn-lg' %>
+    <div class="well">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="progress-status text-primary">
+            0/0
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="`gress progress-striped active">
+            <div class="progress-bar">
+              <div class="text-primary">
+                0%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= link_to 'View csv', '/export.csv', class: 'btn btn-success export-link', style: 'display:none' %>
+  </div>
+</div>  
+
+<script>
+  $(document).ready(function(){
+    progress_job('<%= @job.try(:id) %>');
+  });
+</script>

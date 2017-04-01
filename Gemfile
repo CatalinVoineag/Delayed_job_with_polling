@@ -45,3 +45,8 @@ group :development do
   gem 'spring'
 end
 
+gem 'delayed_job_active_record'
+gem 'daemons'
+gem "delayed_job_web"
+gem 'awesome_print'
+gem 'bootstrap-sass'
